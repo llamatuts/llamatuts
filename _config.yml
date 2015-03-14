@@ -12,3 +12,29 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+
+authors:
+  jono:
+    name: Jonathan Yeong
+    display_name: jono
+    gravatar: 7693460f070c2e00c78e56806d4fdfc0
+    email: jonathanyeong@gmail.com
+    web: http://jonathanyeong.com
+    twitter: jonoyeong
+    github: jonathanyeong
+  wendy:
+    name: Wendy Beth 
+    display_name:
+    gravatar:
+    email:
+    web: http://wendybeth.ghost.io
+    twitter: wendybeth010
+    github: WendyBeth
+  jimmy:
+    name: Jimmy Lo
+    display_name:
+    gravatar:
+    email:
+    web: http://jimmylocoding.com/
+    twitter: jimmylocoding 
+    github: jimmylorunning
