@@ -6,7 +6,6 @@ layout: default
 
   <h1 class="page-heading">Posts</h1>
 
-  <ul class="post-list">
     {% for post in site.posts %}
 
       <div class="col-md-4">
@@ -35,12 +34,7 @@ layout: default
       </div><!-- /.col-md-4 -->
 
 
-    <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-      </li>
     {% endfor %}
-  </ul>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
