@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Test Three"
-date:   2015-03-13 11:53:17
+date:   2015-03-26 11:53:17
 excerpt: "this is an excerpt"
 categories: jekyll update
 ---
