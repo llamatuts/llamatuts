@@ -4,3 +4,19 @@
       max-width: none;
     }
 }
+
+.post-box {
+  position: relative;
+}
+
+.excerpt {
+  margin-bottom: 75px;
+}
+
+.index-meta {
+  text-align: right;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

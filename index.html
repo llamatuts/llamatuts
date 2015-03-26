@@ -20,13 +20,15 @@ layout: default
               </h3>
             </div><!-- /.panel-heading -->
             <div class="panel-body">
-              placeholder
-              <br />
-              <br />
+              <article class="excerpt">
+                {{ post.excerpt }}
+              </article>
               <small>
-                {{ post.date | date: "%b %-d, %Y" }}
-                <br />
-                place holder category?
+                <div class="index-meta">
+                  {{ post.date | date: "%b %-d, %Y" }}
+                  <br />
+                  place holder category?
+                </div>
               </small>
             </div><!-- /.panel-body -->
           </div><!-- /.panel panel-default -->
