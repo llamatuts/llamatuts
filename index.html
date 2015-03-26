@@ -6,7 +6,7 @@ layout: default
 
   <h1 class="page-heading">Posts</h1>
 
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
 
       <div class="col-md-4">
         <div class="container-fluid">
@@ -38,6 +38,25 @@ layout: default
 
     {% endfor %}
 
+    <!-- Pagination links -->
+
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="previous">
+          Previous |
+        </a>
+      {% else %}
+        <span class="previous">Previous | </span>
+      {% endif %}
+      <span class="page_number ">
+        Page: {{ paginator.page }} of {{ paginator.total_pages }}
+      </span>
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="next"> | Next</a>
+      {% else %}
+        <span class="next "> | Next</span>
+      {% endif %}
+    </div><!-- /.pagination -->
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>

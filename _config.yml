@@ -12,6 +12,8 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+paginate: 9
+paginate_path: "/page:num"
 
 authors:
   jono:
