@@ -11,7 +11,7 @@ layout: default
       <div class="col-md-4">
         <div class="container-fluid">
           <div class="panel panel-default post-box">
-            <div class="panel-heading">
+            <div class="panel-heading {{ post.category }}">
               <h3 class="panel-title">
                 <a class="post-link"
                   href="{{ post.url || prepend: site.baseurl }}">
@@ -27,7 +27,7 @@ layout: default
                 <div class="index-meta">
                   {{ post.date | date: "%b %-d, %Y" }}
                   <br />
-                  Category: {{ post.categories }}
+                  Category: {{ post.category }}
                 </div>
               </small>
             </div><!-- /.panel-body -->
