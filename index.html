@@ -9,10 +9,28 @@ layout: default
 
     </div>
     <div class="col-xs-8 pull-right">
-      {{ paginator.posts.first.title }}
+      <div class="panel panel-default">
+        <div class="panel-heading {{ post.category }}">
+          <h3 class="panel-title">
+            <a class="post-link" href="{{ post.url || prepend: site.baseurl }}">
+              {{ paginator.posts.first.title }}
+            </a>
+          </h3>
+        </div>
+        <div class="panel-body">
 
-      {{ paginator.posts.first.excerpt }}
-      {{ paginator.posts.first.date | date: "%b %-d %Y" }}
+          <article-class="excerpt">
+            {{ paginator.posts.first.excerpt }}
+          </article>
+          <small>
+            <div class="index-meta most-recent-meta">
+              {{ paginator.posts.first.date | date: "%b %-d %Y" }}
+              <br />
+              Category: {{ post.category }}
+            </div><!-- /.index-meta -->
+          </small>
+        </div><!-- /.panel-body -->
+      </div><!-- /.panel .panel-default -->
     </div><!-- /.col-xs-8 .pull-right -->
   </div><!-- /.first-post -->
 
