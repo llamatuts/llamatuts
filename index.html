@@ -4,43 +4,51 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <div class="row first-post">
+    <div class="col-xs-4 llama-pic">
 
-    <div class="first-post">
+    </div>
+    <div class="col-xs-8 pull-right">
       {{ paginator.posts.first.title }}
 
       {{ paginator.posts.first.excerpt }}
-    </div>
+      {{ paginator.posts.first.date | date: "%b %-d %Y" }}
+    </div><!-- /.col-xs-8 .pull-right -->
+  </div><!-- /.first-post -->
+
+  <h1 class="page-heading">Posts</h1>
+
     {% for post in paginator.posts %}
+      {% if paginator.posts.first != post %}
 
-      <div class="col-md-4">
-        <div class="container-fluid">
-          <div class="panel panel-default post-box">
-            <div class="panel-heading {{ post.category }}">
-              <h3 class="panel-title">
-                <a class="post-link"
-                  href="{{ post.url || prepend: site.baseurl }}">
-                  {{ post.title }}
-                </a>
-              </h3>
-            </div><!-- /.panel-heading -->
-            <div class="panel-body">
-              <article class="excerpt">
-                {{ post.excerpt }}
-              </article>
-              <small>
-                <div class="index-meta">
-                  {{ post.date | date: "%b %-d, %Y" }}
-                  <br />
-                  Category: {{ post.category }}
-                </div>
-              </small>
-            </div><!-- /.panel-body -->
-          </div><!-- /.panel panel-default -->
-        </div><!-- /.container-fluid -->
-      </div><!-- /.col-md-4 -->
+        <div class="col-md-4">
+          <div class="container-fluid">
+            <div class="panel panel-default post-box">
+              <div class="panel-heading {{ post.category }}">
+                <h3 class="panel-title">
+                  <a class="post-link"
+                    href="{{ post.url || prepend: site.baseurl }}">
+                    {{ post.title }}
+                  </a>
+                </h3>
+              </div><!-- /.panel-heading -->
+              <div class="panel-body">
+                <article class="excerpt">
+                  {{ post.excerpt }}
+                </article>
+                <small>
+                  <div class="index-meta">
+                    {{ post.date | date: "%b %-d, %Y" }}
+                    <br />
+                    Category: {{ post.category }}
+                  </div>
+                </small>
+              </div><!-- /.panel-body -->
+            </div><!-- /.panel panel-default -->
+          </div><!-- /.container-fluid -->
+        </div><!-- /.col-md-4 -->
 
-
+      {% endif %}
     {% endfor %}
 
     <!-- Pagination links -->
