@@ -26,7 +26,8 @@ layout: default
             <div class="index-meta most-recent-meta">
               {{ paginator.posts.first.date | date: "%b %-d %Y" }}
               <br />
-              Category: {{ post.category }}
+              Category: {{ paginator.posts.first.category
+                                                  | replace: '-', ' ' }}
             </div><!-- /.index-meta -->
           </small>
         </div><!-- /.panel-body -->
