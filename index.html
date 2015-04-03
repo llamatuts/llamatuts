@@ -6,6 +6,11 @@ layout: default
 
   <h1 class="page-heading">Posts</h1>
 
+    <div class="first-post">
+      {{ paginator.posts.first.title }}
+
+      {{ paginator.posts.first.excerpt }}
+    </div>
     {% for post in paginator.posts %}
 
       <div class="col-md-4">
