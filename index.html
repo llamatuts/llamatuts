@@ -5,36 +5,42 @@ layout: default
 <div class="home">
 
   <div class="row">
-    <div class="col-xs-4 llama-pic">
+    <div class="col-xs-4 llama-pic post-box">
       <img src="img/llama-face.jpg" alt="Llama Face!" class="img-responsive img-bordered" />
     </div>
     <div class="first-post col-xs-8">
-      <div class="panel panel-default">
-        <div class="panel-heading {{ post.category }}">
-          <h3 class="panel-title">
+      <div class="panel panel-default post-box">
+        <div class="panel-heading {{ paginator.posts.first.category }}">
+          <h6 class="panel-title">
+            {{ paginator.posts.first.category }}
+          </h6>
+        </div>
+
+        <div class="panel-body">
+          <h3 class="post-title">
             <a class="post-link" href="{{ post.url || prepend: site.baseurl }}">
               {{ paginator.posts.first.title }}
             </a>
           </h3>
-        </div>
-        <div class="panel-body">
+
+          <small>
+            <div class="index-meta">
+              {{ paginator.posts.first.date | date: "%b %-d %Y" }}
+            </div>
+          </small>
 
           <article-class="excerpt">
             {{ paginator.posts.first.excerpt }}
           </article>
-          <small>
-            <div class="index-meta most-recent-meta">
-              {{ paginator.posts.first.date | date: "%b %-d %Y" }}
-              <br />
-              Category: {{ paginator.posts.first.category | replace: '-', ' ' }}
-            </div><!-- /.index-meta -->
-          </small>
+
         </div><!-- /.panel-body -->
       </div><!-- /.panel .panel-default -->
     </div><!-- /.col-xs-8 .pull-right -->
   </div><!-- /.first-post -->
 
-  <h1 class="page-heading">Posts</h1>
+  <hr>
+  <br />
+  <br />
 
     {% for post in paginator.posts %}
       {% if paginator.posts.first != post %}
@@ -43,22 +49,25 @@ layout: default
           <div class="container-fluid">
             <div class="panel panel-default post-box">
               <div class="panel-heading {{ post.category }}">
-                <h3 class="panel-title">
+                <h6 class="panel-title">
+                  {{ post.category }}
+                </h6>
+              </div><!-- /.panel-heading -->
+
+              <div class="panel-body">
+                <h3 class="post-title">
                   <a class="post-link"
                     href="{{ post.url || prepend: site.baseurl }}">
                     {{ post.title }}
                   </a>
                 </h3>
-              </div><!-- /.panel-heading -->
-              <div class="panel-body">
+
                 <article class="excerpt">
                   {{ post.excerpt }}
                 </article>
                 <small>
                   <div class="index-meta">
                     {{ post.date | date: "%b %-d, %Y" }}
-                    <br />
-                    Category: {{ post.category }}
                   </div>
                 </small>
               </div><!-- /.panel-body -->

@@ -15,26 +15,27 @@ img.img-bordered {
   border-radius: 4px;
 }
 
+h3.post-title {
+  margin-bottom: 30px;
+}
+
+h6.panel-title {
+  font-size: 0.8em;
+}
+
 .post-box {
   position: relative;
 }
 
 .excerpt {
-  margin-bottom: 75px;
+  margin-bottom: 100px;
 }
 
 .index-meta {
   text-align: right;
   padding: 10px;
+  padding-top: 35px;
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: 0;
-}
-
-.most-recent-meta {
-  padding: 30px;
-}
-
-.meta-data {
-  background-color: blue !important;
 }
