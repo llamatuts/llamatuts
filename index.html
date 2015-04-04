@@ -4,11 +4,11 @@ layout: default
 
 <div class="home">
 
-  <div class="row first-post">
+  <div class="row">
     <div class="col-xs-4 llama-pic">
-
+      <img src="img/llama-face.jpg" alt="Llama Face!" class="img-responsive img-bordered" />
     </div>
-    <div class="col-xs-8 pull-right">
+    <div class="first-post col-xs-8">
       <div class="panel panel-default">
         <div class="panel-heading {{ post.category }}">
           <h3 class="panel-title">
@@ -26,8 +26,7 @@ layout: default
             <div class="index-meta most-recent-meta">
               {{ paginator.posts.first.date | date: "%b %-d %Y" }}
               <br />
-              Category: {{ paginator.posts.first.category
-                                                  | replace: '-', ' ' }}
+              Category: {{ paginator.posts.first.category | replace: '-', ' ' }}
             </div><!-- /.index-meta -->
           </small>
         </div><!-- /.panel-body -->
